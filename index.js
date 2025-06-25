@@ -113,4 +113,11 @@ client.on('interactionCreate', async interaction => {
     }
 });
 
+// Start Express server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    log.info(`Express server is running on port ${PORT}`);
+});
+
+
 client.login(process.env.TOKEN);
